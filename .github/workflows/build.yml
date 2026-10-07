@@ -1,1 +1,17 @@
-
+name: Check site build
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build and validate (links, titles, h1, placeholders)
+        run: node tools/build.mjs
+        env:
+          SITE_URL: https://ci-check.example
