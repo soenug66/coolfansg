@@ -179,5 +179,22 @@ blocks: [
  {h2:'5. Returns and buyer protection',p:['Read the return window, who pays for return shipping, and the buyer protection terms. For electrical items, confirm what happens if the wrong plug arrives.']},
  {h2:'6. Seller and reviews',p:['Look at the seller rating, how long the store has operated, and recent reviews. Pay attention to comments about noise, the controller and the plug. The featured listing had a small number of reviews when we checked, so treat the rating as an early indicator.']},
  {h2:'Our approach',p:['We link to the listing so you can check the current price. We do not hold stock or set prices, and we may earn a commission. See our {{disclosure}}.']}
+]},
+{
+slug: 'how-to-run-a-250mm-dc-fan-quietly',
+title: 'How to Run a 250mm DC Fan Quietly at Home in Singapore',
+description: 'Practical ways to reduce noise from a large 12V DC cooling fan: lower speed, clear airflow, secure mounting, vibration pads and cable tidying.',
+keywords: ['quiet cooling fan Singapore', 'reduce fan noise', '250mm fan noise'],
+updated: '2026-10-08',
+related: ['how-a-speed-controller-helps-a-dc-cooling-fan','how-to-install-a-250mm-cooling-fan-safely','250mm-vs-200mm-cooling-fan-which-size-should-you-choose'],
+blocks: [
+ {p:['In a Singapore flat or a small workshop, fan noise matters because rooms are close together and you often run a fan for hours. A large fan can be quiet, but only if it is set up well. We have not measured the featured fan\'s noise level, and its listing does not state one. These are general steps that reduce noise on most fans.']},
+ {h2:'1. Run it slower',p:['Noise rises quickly with speed. A 250mm fan moves a lot of air at a low setting, so try the lowest speed that gives you the airflow you need, and raise it only if necessary. See {{g:how-a-speed-controller-helps-a-dc-cooling-fan}}.']},
+ {h2:'2. Give the fan clear space',ul:['Do not push the fan against a wall, shelf or box. Blocked intake makes turbulence and extra noise.','Keep the guard free of dust. Clean it with the fan unplugged.','Avoid placing it right next to a surface that can echo the sound, such as a bare wall or a thin panel.']},
+ {h2:'3. Mount it firmly',p:['A loose mount turns a gentle hum into a rattle. Use proper fixings, tighten them evenly without cracking plastic, and check them again after a few days. A fan on a thin or hollow panel can make the whole panel resonate, so a solid surface or bracket is better.']},
+ {h2:'4. Add vibration damping',ul:['Rubber washers or soft pads between the fan and the mount reduce vibration passing into the structure.','If the fan stands on a surface, use a rubber mat under it.']},
+ {h2:'5. Tidy the cables and the power unit',p:['Cables that touch the guard or blades can tick or buzz. Route them away and secure them. Some power units with a dial can hum at low settings, so place the unit away from where you sit and off a hollow surface. Keep it ventilated and dry. Read {{g:how-to-install-a-250mm-cooling-fan-safely}} first.']},
+ {h2:'6. Check for the real cause',p:['If a sound is clicking, grinding or scraping, stop and unplug the fan. Look for a loose screw, something touching the blades or a bent guard. Do not keep running a fan that makes a mechanical noise.']},
+ {h2:'Choosing a size for quieter use',p:['A larger fan can move the same air at a lower speed, which is why a 250mm fan is often a good choice when quiet matters and you have the space. See {{g:250mm-vs-200mm-cooling-fan-which-size-should-you-choose}}.']}
 ]}
 ];
