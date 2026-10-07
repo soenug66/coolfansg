@@ -1,0 +1,2 @@
+# Automation notes
+Never put an AliExpress App Secret in public JavaScript. Use a server-side job (GitHub Action with a repository secret, or a Cloudflare Worker) to fetch product data through the official affiliate API, write it to `data/products.json` (price, `priceCheckedAt`), commit, and let Cloudflare Pages rebuild. Implement the API signature from the current official documentation for your affiliate account.
