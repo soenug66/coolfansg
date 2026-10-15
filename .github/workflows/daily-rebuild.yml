@@ -1,0 +1,8 @@
+# Rebuild quotidien : appelle le Deploy Hook Cloudflare Pages (secret GitHub : CF_DEPLOY_HOOK)
+name: daily-deploy
+on: { schedule: [{ cron: '0 4 * * *' }], workflow_dispatch: {} }
+jobs:
+  hook:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS -X POST "${{ secrets.CF_DEPLOY_HOOK }}"
