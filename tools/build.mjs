@@ -50,7 +50,7 @@ function head({ title, desc, path: p, jsonld = [], noindex = false, type = 'webs
 <title>${esc(full)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1'}">
-<link rel="canonical" href="${url}">
+${site.googleVerification ? `<meta name="google-site-verification" content="${esc(site.googleVerification)}">\n` : ''}<link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="en-SG" href="${url}">
 <link rel="alternate" hreflang="x-default" href="${url}">
 <meta name="geo.region" content="SG">
@@ -308,4 +308,7 @@ if (errors.length) { console.error('Build failed:\n - ' + errors.join('\n - '));
 fs.rmSync(dist, { recursive: true, force: true });
 for (const [f, c] of files) { const t = path.join(dist, f); fs.mkdirSync(path.dirname(t), { recursive: true }); fs.writeFileSync(t, c); }
 fs.cpSync(path.join(root, 'assets'), path.join(dist, 'assets'), { recursive: true });
+// Search Console: file verifikasi google*.html di root repo, serta seluruh isi folder public/ (jika ada), ikut disalin ke dist.
+for (const f of fs.readdirSync(root)) if (/^google[0-9a-f]+\.html$/i.test(f)) fs.copyFileSync(path.join(root, f), path.join(dist, f));
+if (fs.existsSync(path.join(root, 'public'))) fs.cpSync(path.join(root, 'public'), dist, { recursive: true });
 console.log(`OK: ${pages.length} pages, domain ${domain}${isPagesDev ? ' (pages.dev: preview only)' : ''}`);
